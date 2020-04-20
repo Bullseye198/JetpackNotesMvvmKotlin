@@ -13,7 +13,18 @@ import com.wiseassblog.jetpacknotesmvvmkotlin.R
 import com.wiseassblog.jetpacknotesmvvmkotlin.model.Note
 import kotlinx.android.synthetic.main.item_note.view.*
 
-class NoteListAdapter(val event:MutableLiveData<NoteListEvent> = MutableLiveData()): ListAdapter<Note, NoteListAdapter.NoteViewHolder>(NoteDiffUtilCallback()){
+
+//Note list event - Sealed class which represent different events which
+//can occur in the front ent
+//Mutable live data - something that can be observed.
+class NoteListAdapter(val event: MutableLiveData<NoteListEvent> = MutableLiveData()): ListAdapter<Note, NoteListAdapter.NoteViewHolder>
+    (NoteDiffUtilCallback()) {
+
+    class NoteViewHolder(root: View): RecyclerView.ViewHolder(root) {
+        var content: TextView = root.lbl_message
+        var date: TextView = root.lbl_date_and_time
+    }
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NoteViewHolder {
         val inflater = LayoutInflater.from(parent.context)
 
@@ -27,18 +38,14 @@ class NoteListAdapter(val event:MutableLiveData<NoteListEvent> = MutableLiveData
             holder.content.text = note.contents
             holder.date.text = note.creationDate
 
-            holder.itemView.setOnClickListener {
+            holder.itemView.setOnClickListener{
                 event.value = NoteListEvent.OnNoteItemClick(position)
             }
         }
     }
 
-
-    class NoteViewHolder(root: View): RecyclerView.ViewHolder(root){
-        var content: TextView = root.lbl_message
-        var date: TextView = root.lbl_date_and_time
-    }
 }
+
 
 
 
