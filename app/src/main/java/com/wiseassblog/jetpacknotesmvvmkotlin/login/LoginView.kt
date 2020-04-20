@@ -8,7 +8,6 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.activity.OnBackPressedCallback
 import androidx.activity.addCallback
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
@@ -22,7 +21,7 @@ import com.wiseassblog.jetpacknotesmvvmkotlin.common.ANTENNA_LOOP
 import com.wiseassblog.jetpacknotesmvvmkotlin.common.RC_SIGN_IN
 import com.wiseassblog.jetpacknotesmvvmkotlin.common.startWithFade
 import com.wiseassblog.jetpacknotesmvvmkotlin.login.buildlogic.LoginInjector
-import com.wiseassblog.jetpacknotesmvvmkotlin.model.LoginResult
+import com.example.domain.login.LoginResult
 import com.wiseassblog.jetpacknotesmvvmkotlin.note.NoteActivity
 import kotlinx.android.synthetic.main.fragment_login.*
 

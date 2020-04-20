@@ -4,7 +4,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.GoogleAuthProvider
 import com.wiseassblog.jetpacknotesmvvmkotlin.common.Result
 import com.wiseassblog.jetpacknotesmvvmkotlin.common.awaitTaskCompletable
-import com.wiseassblog.jetpacknotesmvvmkotlin.model.User
+import com.example.domain.user.User
 import com.wiseassblog.jetpacknotesmvvmkotlin.model.repository.IUserRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext

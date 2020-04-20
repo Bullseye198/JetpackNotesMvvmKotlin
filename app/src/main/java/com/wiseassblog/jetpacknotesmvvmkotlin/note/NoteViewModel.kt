@@ -5,7 +5,7 @@ import androidx.lifecycle.MutableLiveData
 import com.wiseassblog.jetpacknotesmvvmkotlin.common.BaseViewModel
 import com.wiseassblog.jetpacknotesmvvmkotlin.common.GET_NOTE_ERROR
 import com.wiseassblog.jetpacknotesmvvmkotlin.common.Result
-import com.wiseassblog.jetpacknotesmvvmkotlin.model.Note
+import com.example.domain.note.Note
 import com.wiseassblog.jetpacknotesmvvmkotlin.model.repository.INoteRepository
 import com.wiseassblog.jetpacknotesmvvmkotlin.note.notedetail.NoteDetailEvent
 import kotlinx.coroutines.launch
@@ -71,7 +71,13 @@ class NoteViewModel(
 
     private fun newNote() {
         noteState.value =
-            Note(getCalendarTime(), "", 0, "rocket_loop", null)
+            Note(
+                getCalendarTime(),
+                "",
+                0,
+                "rocket_loop",
+                null
+            )
     }
 
 

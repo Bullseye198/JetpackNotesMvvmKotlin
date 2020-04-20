@@ -1,4 +1,4 @@
-package com.wiseassblog.jetpacknotesmvvmkotlin.model
+package com.example.domain.firebase
 
 data class FirebaseNote(
         val creationDate: String? = "",

@@ -3,10 +3,10 @@ package com.wiseassblog.jetpacknotesmvvmkotlin.common
 import android.text.Editable
 import com.google.android.gms.tasks.Task
 import com.google.firebase.auth.FirebaseUser
-import com.wiseassblog.jetpacknotesmvvmkotlin.model.FirebaseNote
-import com.wiseassblog.jetpacknotesmvvmkotlin.model.Note
+import com.example.domain.firebase.FirebaseNote
+import com.example.domain.note.Note
 import com.wiseassblog.jetpacknotesmvvmkotlin.model.RoomNote
-import com.wiseassblog.jetpacknotesmvvmkotlin.model.User
+import com.example.domain.user.User
 import kotlin.coroutines.resume
 import kotlin.coroutines.resumeWithException
 import kotlin.coroutines.suspendCoroutine

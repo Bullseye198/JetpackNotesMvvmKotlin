@@ -2,8 +2,8 @@ package com.wiseassblog.jetpacknotesmvvmkotlin.login
 
 import androidx.lifecycle.MutableLiveData
 import com.wiseassblog.jetpacknotesmvvmkotlin.common.*
-import com.wiseassblog.jetpacknotesmvvmkotlin.model.LoginResult
-import com.wiseassblog.jetpacknotesmvvmkotlin.model.User
+import com.example.domain.login.LoginResult
+import com.example.domain.user.User
 import com.wiseassblog.jetpacknotesmvvmkotlin.model.repository.IUserRepository
 import kotlinx.coroutines.launch
 import kotlin.coroutines.CoroutineContext
@@ -92,7 +92,7 @@ class UserViewModel(
         if (result.requestCode == RC_SIGN_IN && result.userToken != null) {
 
             val createGoogleUserResult = repo.signInGoogleUser(
-                result.userToken
+                result.userToken!!
             )
 
             //Result.Value means it was successful
