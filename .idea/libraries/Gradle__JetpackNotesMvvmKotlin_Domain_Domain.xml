@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Gradle: JetpackNotesMvvmKotlin.Domain.Domain">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Domain/build/libs/Domain.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
