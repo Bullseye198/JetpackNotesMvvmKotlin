@@ -5,7 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/JetpackNotesMvvmKotlin.iml" filepath="$PROJECT_DIR$/.idea/modules/JetpackNotesMvvmKotlin.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Data/JetpackNotesMvvmKotlin.Data.iml" filepath="$PROJECT_DIR$/.idea/modules/Data/JetpackNotesMvvmKotlin.Data.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Domain/JetpackNotesMvvmKotlin.Domain.iml" filepath="$PROJECT_DIR$/.idea/modules/Domain/JetpackNotesMvvmKotlin.Domain.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/JetpackNotesMvvmKotlin.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/JetpackNotesMvvmKotlin.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/JetpackNotesMvvmKotlin.android-ui.iml" filepath="$PROJECT_DIR$/.idea/modules/app/JetpackNotesMvvmKotlin.android-ui.iml" />
     </modules>
   </component>
 </project>
