@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Martin Vojkovic\\AndroidStudioProjects\\JetpackNotesMvvmKotlin\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
+            "outputFile": "C:\\Users\\Martin Vojkovic\\AndroidStudioProjects\\JetpackNotesMvvmKotlin\\android-ui\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Martin Vojkovic\\.gradle\\caches\\transforms-2\\files-2.1\\97df85f42774cf1b39e03a54599682d4\\recyclerview-1.1.0-beta04\\res\\values\\values.xml",
@@ -20,6 +20,23 @@
                         "endLines": "257,556,557,558,566,567,568,682,4739",
                         "endColumns": "55,58,47,55,74,75,71,65,24",
                         "endOffsets": "11608,30463,30511,30567,31253,31329,31401,38207,313555"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Martin Vojkovic\\AndroidStudioProjects\\JetpackNotesMvvmKotlin\\android-ui\\build\\generated\\res\\google-services\\debug\\values\\values.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,199,324,406,510,619,739,853",
+                        "endColumns": "143,124,81,103,108,119,113,90",
+                        "endOffsets": "194,319,401,505,614,734,848,939"
+                    },
+                    "to": {
+                        "startLines": "788,791,792,793,794,795,796,807",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "45873,46331,46456,46538,46642,46751,46871,48254",
+                        "endColumns": "143,124,81,103,108,119,113,90",
+                        "endOffsets": "46012,46451,46533,46637,46746,46866,46980,48340"
                     }
                 },
                 {
@@ -61,23 +78,6 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Martin Vojkovic\\AndroidStudioProjects\\JetpackNotesMvvmKotlin\\app\\build\\generated\\res\\google-services\\debug\\values\\values.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,199,324,406,510,619,739,853",
-                        "endColumns": "143,124,81,103,108,119,113,90",
-                        "endOffsets": "194,319,401,505,614,734,848,939"
-                    },
-                    "to": {
-                        "startLines": "788,791,792,793,794,795,796,807",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "45873,46331,46456,46538,46642,46751,46871,48254",
-                        "endColumns": "143,124,81,103,108,119,113,90",
-                        "endOffsets": "46012,46451,46533,46637,46746,46866,46980,48340"
-                    }
-                },
-                {
                     "source": "C:\\Users\\Martin Vojkovic\\.gradle\\caches\\transforms-2\\files-2.1\\027cc0817b3c968f496f65880e47ae95\\navigation-fragment-2.2.0-alpha03\\res\\values\\values.xml",
                     "from": {
                         "startLines": "2,3,6,9",
@@ -97,7 +97,24 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Martin Vojkovic\\AndroidStudioProjects\\JetpackNotesMvvmKotlin\\app\\src\\main\\res\\values\\styles.xml",
+                    "source": "C:\\Users\\Martin Vojkovic\\AndroidStudioProjects\\JetpackNotesMvvmKotlin\\android-ui\\src\\main\\res\\values\\strings.xml",
+                    "from": {
+                        "startLines": "1,4",
+                        "startColumns": "4,4",
+                        "startOffsets": "17,139",
+                        "endColumns": "59,69",
+                        "endOffsets": "72,204"
+                    },
+                    "to": {
+                        "startLines": "765,797",
+                        "startColumns": "4,4",
+                        "startOffsets": "43008,46985",
+                        "endColumns": "59,69",
+                        "endOffsets": "43063,47050"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Martin Vojkovic\\AndroidStudioProjects\\JetpackNotesMvvmKotlin\\android-ui\\src\\main\\res\\values\\styles.xml",
                     "from": {
                         "startLines": "3",
                         "startColumns": "4",
@@ -113,23 +130,6 @@
                         "endLines": "826",
                         "endColumns": "12",
                         "endOffsets": "49577"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\Martin Vojkovic\\AndroidStudioProjects\\JetpackNotesMvvmKotlin\\app\\src\\main\\res\\values\\colors.xml",
-                    "from": {
-                        "startLines": "12,13,11,14,4,2,3,8,9,5",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "459,499,420,540,157,57,105,300,359,204",
-                        "endColumns": "38,39,37,40,45,46,50,57,57,55",
-                        "endOffsets": "493,534,453,576,198,99,151,353,412,255"
-                    },
-                    "to": {
-                        "startLines": "319,320,321,322,345,346,347,348,349,350",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "14454,14493,14533,14571,16269,16315,16362,16413,16471,16529",
-                        "endColumns": "38,39,37,40,45,46,50,57,57,55",
-                        "endOffsets": "14488,14528,14566,14607,16310,16357,16408,16466,16524,16580"
                     }
                 },
                 {
@@ -283,23 +283,6 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Martin Vojkovic\\AndroidStudioProjects\\JetpackNotesMvvmKotlin\\app\\src\\main\\res\\values\\strings.xml",
-                    "from": {
-                        "startLines": "1,4",
-                        "startColumns": "4,4",
-                        "startOffsets": "17,139",
-                        "endColumns": "59,69",
-                        "endOffsets": "72,204"
-                    },
-                    "to": {
-                        "startLines": "765,797",
-                        "startColumns": "4,4",
-                        "startOffsets": "43008,46985",
-                        "endColumns": "59,69",
-                        "endOffsets": "43063,47050"
-                    }
-                },
-                {
                     "source": "C:\\Users\\Martin Vojkovic\\.gradle\\caches\\transforms-2\\files-2.1\\f6e97edbf80761f853f53a5368b63607\\jetified-appcompat-resources-1.1.0\\res\\values\\values.xml",
                     "from": {
                         "startLines": "2,29,36,47,74",
@@ -355,7 +338,41 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Martin Vojkovic\\AndroidStudioProjects\\JetpackNotesMvvmKotlin\\app\\src\\main\\res\\values\\view_styles.xml",
+                    "source": "C:\\Users\\Martin Vojkovic\\.gradle\\caches\\transforms-2\\files-2.1\\58e1457070ec493fb783ae18e0851e1a\\navigation-ui-2.2.0-alpha03\\res\\values\\values.xml",
+                    "from": {
+                        "startLines": "2,3,4",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,108,184",
+                        "endColumns": "52,75,86",
+                        "endOffsets": "103,179,266"
+                    },
+                    "to": {
+                        "startLines": "726,800,801",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "40400,47289,47365",
+                        "endColumns": "52,75,86",
+                        "endOffsets": "40448,47360,47447"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Martin Vojkovic\\AndroidStudioProjects\\JetpackNotesMvvmKotlin\\android-ui\\src\\main\\res\\values\\colors.xml",
+                    "from": {
+                        "startLines": "12,13,11,14,4,2,3,8,9,5",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "459,499,420,540,157,57,105,300,359,204",
+                        "endColumns": "38,39,37,40,45,46,50,57,57,55",
+                        "endOffsets": "493,534,453,576,198,99,151,353,412,255"
+                    },
+                    "to": {
+                        "startLines": "319,320,321,322,345,346,347,348,349,350",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "14454,14493,14533,14571,16269,16315,16362,16413,16471,16529",
+                        "endColumns": "38,39,37,40,45,46,50,57,57,55",
+                        "endOffsets": "14488,14528,14566,14607,16310,16357,16408,16466,16524,16580"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Martin Vojkovic\\AndroidStudioProjects\\JetpackNotesMvvmKotlin\\android-ui\\src\\main\\res\\values\\view_styles.xml",
                     "from": {
                         "startLines": "3,7,11,16,22,28",
                         "startColumns": "4,4,4,4,4,4",
@@ -371,23 +388,6 @@
                         "endLines": "829,2483,2487,2492,2496,2840",
                         "endColumns": "12,12,12,12,12,12",
                         "endOffsets": "49729,159165,159325,159547,159723,183436"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\Martin Vojkovic\\.gradle\\caches\\transforms-2\\files-2.1\\58e1457070ec493fb783ae18e0851e1a\\navigation-ui-2.2.0-alpha03\\res\\values\\values.xml",
-                    "from": {
-                        "startLines": "2,3,4",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "55,108,184",
-                        "endColumns": "52,75,86",
-                        "endOffsets": "103,179,266"
-                    },
-                    "to": {
-                        "startLines": "726,800,801",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "40400,47289,47365",
-                        "endColumns": "52,75,86",
-                        "endOffsets": "40448,47360,47447"
                     }
                 }
             ]

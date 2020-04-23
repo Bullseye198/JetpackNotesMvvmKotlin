@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Martin Vojkovic\\AndroidStudioProjects\\JetpackNotesMvvmKotlin\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-mr\\values-mr.xml",
+            "outputFile": "C:\\Users\\Martin Vojkovic\\AndroidStudioProjects\\JetpackNotesMvvmKotlin\\android-ui\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-mr\\values-mr.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Martin Vojkovic\\.gradle\\caches\\transforms-2\\files-2.1\\c8ea769f45db7f5d41297e8cb1968f24\\appcompat-1.1.0\\res\\values-mr\\values-mr.xml",

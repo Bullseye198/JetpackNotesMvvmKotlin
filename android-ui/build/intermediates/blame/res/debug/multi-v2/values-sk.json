@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Martin Vojkovic\\AndroidStudioProjects\\JetpackNotesMvvmKotlin\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sk\\values-sk.xml",
+            "outputFile": "C:\\Users\\Martin Vojkovic\\AndroidStudioProjects\\JetpackNotesMvvmKotlin\\android-ui\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sk\\values-sk.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Martin Vojkovic\\.gradle\\caches\\transforms-2\\files-2.1\\31ba342cac281afa7eb93564e7b6e2c2\\jetified-play-services-basement-17.1.1\\res\\values-sk\\values.xml",

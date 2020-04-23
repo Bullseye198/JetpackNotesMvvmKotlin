@@ -1,7 +1,7 @@
 package com.example.domain.note
 
-import com.wiseassblog.jetpacknotesmvvmkotlin.common.Result
 import com.example.domain.note.model.Note
+import com.example.domain.user.Result
 
 interface INoteRepository {
 

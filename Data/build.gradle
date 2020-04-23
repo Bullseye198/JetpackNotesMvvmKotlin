@@ -15,10 +15,22 @@ dependencies {
 
     implementation "com.google.dagger:dagger-android:2.27"
     implementation "com.google.dagger:dagger-android-support:2.27"
+    implementation 'com.google.firebase:firebase-auth:19.3.0'
 
     kapt "com.google.dagger:dagger-compiler:2.27"
     kapt "com.google.dagger:dagger-android-processor:2.27"
 
 
     testImplementation "android.arch.core:core-testing:1.1.1"
+
+    //impl
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$rootProject.coroutinesVersion"
+
+    implementation "com.google.firebase:firebase-core:$rootProject.firebaseCore"
+    implementation "com.google.firebase:firebase-auth:$rootProject.firebaseAuth"
+    implementation "com.google.android.gms:play-services-auth:$rootProject.playServicesAuth"
+
+
+
+
 }

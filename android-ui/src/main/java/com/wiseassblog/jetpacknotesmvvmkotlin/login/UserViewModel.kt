@@ -6,6 +6,7 @@ import com.wiseassblog.jetpacknotesmvvmkotlin.common.*
 import com.example.domain.login.LoginResult
 import com.example.domain.user.model.User
 import com.example.domain.user.IUserRepository
+import com.example.domain.user.Result
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
