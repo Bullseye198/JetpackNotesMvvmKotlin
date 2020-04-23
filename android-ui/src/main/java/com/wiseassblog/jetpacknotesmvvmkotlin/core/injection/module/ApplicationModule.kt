@@ -3,7 +3,7 @@ package com.wiseassblog.jetpacknotesmvvmkotlin.core.injection.module
 import android.content.Context
 import androidx.room.Room
 import com.example.domain.AppCoroutineDispatchers
-import com.wiseassblog.jetpacknotesmvvmkotlin.model.RoomNoteDatabase
+import com.example.data.RoomNoteDatabase
 import dagger.Module
 import dagger.Provides
 import kotlinx.coroutines.Dispatchers
@@ -16,7 +16,7 @@ object ApplicationModule {
     @Provides
      fun provideRoomNoteDatabase(
          applicationContext: Context
-         ) : RoomNoteDatabase{
+         ) : RoomNoteDatabase {
          return Room.databaseBuilder(applicationContext, RoomNoteDatabase::class.java, "notesdagger")
              .build()
      }

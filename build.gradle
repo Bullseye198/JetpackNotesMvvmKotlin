@@ -5,10 +5,10 @@ buildscript {
         minSdkVersion = 21
         targetSdkVersion = 28
 
-        playServicesAuth = "17.0.0"
-        firebaseAuth = "19.1.0"
+        playServicesAuth = '18.0.0'
+        firebaseAuth = '19.3.0'
         firebaseCrash = "2.10.1"
-        firebaseCore = "17.2.0"
+        firebaseCore = '17.3.0'
         firebaseFirestore = "21.4.2"
         constraintLayoutVersion = '2.0.0-beta4'
         coreTestingVersion = '2.0.0'
@@ -31,7 +31,7 @@ buildscript {
         supportLibraryVersion = '1.1.0'
         uiAutomatorVersion = '2.2.0'
         workVersion = '1.0.0'
-        kotlin_version = '1.3.61'
+        kotlin_version = '1.3.71'
     }
 
     repositories {

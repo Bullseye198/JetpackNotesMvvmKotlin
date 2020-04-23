@@ -1,13 +1,17 @@
-plugins {
-    id 'java-library'
-    id 'kotlin'
-    id 'kotlin-kapt'
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion rootProject.compileSdkVersion
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
 }
 
-java {
-    sourceCompatibility = JavaVersion.VERSION_1_7
-    targetCompatibility = JavaVersion.VERSION_1_7
-}
 
 dependencies {
     implementation project(':Domain')
@@ -19,16 +23,25 @@ dependencies {
 
     kapt "com.google.dagger:dagger-compiler:2.27"
     kapt "com.google.dagger:dagger-android-processor:2.27"
+    implementation "androidx.room:room-runtime:$rootProject.room"
+    implementation "androidx.room:room-ktx:$rootProject.room"
+
+    implementation "com.google.firebase:firebase-firestore:$rootProject.firebaseFirestore"
+
+    kapt "androidx.room:room-compiler:$rootProject.room"
 
 
     testImplementation "android.arch.core:core-testing:1.1.1"
 
     //impl
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$rootProject.coroutinesVersion"
+
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$rootProject.coroutinesVersion"
 
-    implementation "com.google.firebase:firebase-core:$rootProject.firebaseCore"
-    implementation "com.google.firebase:firebase-auth:$rootProject.firebaseAuth"
-    implementation "com.google.android.gms:play-services-auth:$rootProject.playServicesAuth"
+    implementation 'com.google.firebase:firebase-auth:19.3.0'
+    implementation 'com.google.android.gms:play-services-gcm:17.0.0'
+    kapt 'com.google.firebase:firebase-auth:16.0.1'
+
 
 
 

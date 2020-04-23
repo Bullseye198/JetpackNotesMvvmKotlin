@@ -2,7 +2,7 @@
 package com.wiseassblog.jetpacknotesmvvmkotlin.core.injection.module;
 
 import android.content.Context;
-import com.wiseassblog.jetpacknotesmvvmkotlin.model.RoomNoteDatabase;
+import com.example.data.RoomNoteDatabase;
 import dagger.internal.Factory;
 import dagger.internal.Preconditions;
 import javax.inject.Provider;

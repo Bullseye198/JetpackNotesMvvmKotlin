@@ -3,7 +3,7 @@
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel>
       <module name="JetpackNotesMvvmKotlin.android-ui" target="1.8" />
-      <module name="JetpackNotesMvvmKotlin.Data" target="1.7" />
+      <module name="JetpackNotesMvvmKotlin.Data" target="1.8" />
       <module name="JetpackNotesMvvmKotlin.Domain" target="1.7" />
     </bytecodeTargetLevel>
   </component>

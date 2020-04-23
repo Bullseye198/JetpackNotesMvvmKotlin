@@ -1,0 +1,3 @@
+View Model must not know what he is showing on the screen.
+we Must make an usecase and then the view model uses that usecase
+usecase has the access to the repository

@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="Gradle: JetpackNotesMvvmKotlin.Data.Data">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/Data/build/libs/Data.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>
