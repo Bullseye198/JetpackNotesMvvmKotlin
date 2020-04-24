@@ -10,6 +10,10 @@ import com.example.data.firebase.FirebaseUserRepoImpl_Factory;
 import com.example.data.note.NoteRepoImpl;
 import com.example.data.note.NoteRepoImpl_Factory;
 import com.example.domain.AppCoroutineDispatchers;
+import com.example.domain.usecases.OnDeleteNoteUseCase;
+import com.example.domain.usecases.OnDeleteNoteUseCase_Factory;
+import com.example.domain.usecases.OnUpdateNoteUseCase;
+import com.example.domain.usecases.OnUpdateNoteUseCase_Factory;
 import com.google.common.collect.ImmutableMap;
 import com.google.errorprone.annotations.CanIgnoreReturnValue;
 import com.wiseassblog.jetpacknotesmvvmkotlin.MyApplication;
@@ -74,6 +78,10 @@ public final class DaggerAppComponent implements AppComponent {
 
   private Provider<NoteRepoImpl> noteRepoImplProvider;
 
+  private Provider<OnDeleteNoteUseCase> onDeleteNoteUseCaseProvider;
+
+  private Provider<OnUpdateNoteUseCase> onUpdateNoteUseCaseProvider;
+
   private Provider<AppCoroutineDispatchers> provideCoroutineDispatchersProvider;
 
   private Provider<NoteViewModel> noteViewModelProvider;
@@ -131,8 +139,10 @@ public final class DaggerAppComponent implements AppComponent {
     this.provideRoomNoteDatabaseProvider = DoubleCheck.provider(ApplicationModule_ProvideRoomNoteDatabaseFactory.create(applicationContextProvider));
     this.provideNoteDaoProvider = DaoModule_ProvideNoteDaoFactory.create(provideRoomNoteDatabaseProvider);
     this.noteRepoImplProvider = DoubleCheck.provider(NoteRepoImpl_Factory.create(provideNoteDaoProvider));
+    this.onDeleteNoteUseCaseProvider = OnDeleteNoteUseCase_Factory.create((Provider) noteRepoImplProvider);
+    this.onUpdateNoteUseCaseProvider = OnUpdateNoteUseCase_Factory.create((Provider) noteRepoImplProvider);
     this.provideCoroutineDispatchersProvider = DoubleCheck.provider(ApplicationModule_ProvideCoroutineDispatchersFactory.create());
-    this.noteViewModelProvider = NoteViewModel_Factory.create((Provider) noteRepoImplProvider, provideCoroutineDispatchersProvider);
+    this.noteViewModelProvider = NoteViewModel_Factory.create(onDeleteNoteUseCaseProvider, onUpdateNoteUseCaseProvider, provideCoroutineDispatchersProvider);
     this.noteListViewModelProvider = NoteListViewModel_Factory.create((Provider) noteRepoImplProvider, provideCoroutineDispatchersProvider);
     this.firebaseUserRepoImplProvider = DoubleCheck.provider(FirebaseUserRepoImpl_Factory.create());
     this.userViewModelProvider = UserViewModel_Factory.create((Provider) firebaseUserRepoImplProvider, provideCoroutineDispatchersProvider);

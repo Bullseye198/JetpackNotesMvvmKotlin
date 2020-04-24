@@ -2,7 +2,8 @@
 package com.wiseassblog.jetpacknotesmvvmkotlin.note;
 
 import com.example.domain.AppCoroutineDispatchers;
-import com.example.domain.note.INoteRepository;
+import com.example.domain.usecases.OnDeleteNoteUseCase;
+import com.example.domain.usecases.OnUpdateNoteUseCase;
 import dagger.internal.Factory;
 import javax.inject.Provider;
 
@@ -11,28 +12,34 @@ import javax.inject.Provider;
     "rawtypes"
 })
 public final class NoteViewModel_Factory implements Factory<NoteViewModel> {
-  private final Provider<INoteRepository> noteRepoProvider;
+  private final Provider<OnDeleteNoteUseCase> onDeleteNoteUseCaseProvider;
+
+  private final Provider<OnUpdateNoteUseCase> onUpdateNoteUseCaseProvider;
 
   private final Provider<AppCoroutineDispatchers> coroutineDispatchersProvider;
 
-  public NoteViewModel_Factory(Provider<INoteRepository> noteRepoProvider,
+  public NoteViewModel_Factory(Provider<OnDeleteNoteUseCase> onDeleteNoteUseCaseProvider,
+      Provider<OnUpdateNoteUseCase> onUpdateNoteUseCaseProvider,
       Provider<AppCoroutineDispatchers> coroutineDispatchersProvider) {
-    this.noteRepoProvider = noteRepoProvider;
+    this.onDeleteNoteUseCaseProvider = onDeleteNoteUseCaseProvider;
+    this.onUpdateNoteUseCaseProvider = onUpdateNoteUseCaseProvider;
     this.coroutineDispatchersProvider = coroutineDispatchersProvider;
   }
 
   @Override
   public NoteViewModel get() {
-    return newInstance(noteRepoProvider.get(), coroutineDispatchersProvider.get());
+    return newInstance(onDeleteNoteUseCaseProvider.get(), onUpdateNoteUseCaseProvider.get(), coroutineDispatchersProvider.get());
   }
 
-  public static NoteViewModel_Factory create(Provider<INoteRepository> noteRepoProvider,
+  public static NoteViewModel_Factory create(
+      Provider<OnDeleteNoteUseCase> onDeleteNoteUseCaseProvider,
+      Provider<OnUpdateNoteUseCase> onUpdateNoteUseCaseProvider,
       Provider<AppCoroutineDispatchers> coroutineDispatchersProvider) {
-    return new NoteViewModel_Factory(noteRepoProvider, coroutineDispatchersProvider);
+    return new NoteViewModel_Factory(onDeleteNoteUseCaseProvider, onUpdateNoteUseCaseProvider, coroutineDispatchersProvider);
   }
 
-  public static NoteViewModel newInstance(INoteRepository noteRepo,
-      AppCoroutineDispatchers coroutineDispatchers) {
-    return new NoteViewModel(noteRepo, coroutineDispatchers);
+  public static NoteViewModel newInstance(OnDeleteNoteUseCase onDeleteNoteUseCase,
+      OnUpdateNoteUseCase onUpdateNoteUseCase, AppCoroutineDispatchers coroutineDispatchers) {
+    return new NoteViewModel(onDeleteNoteUseCase, onUpdateNoteUseCase, coroutineDispatchers);
   }
 }

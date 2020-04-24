@@ -7,8 +7,10 @@ import javax.inject.Inject
 class OnUpdateNoteUseCase @Inject constructor(
     private val iNoteRepository: INoteRepository
 )  {
-
+/*
     fun updateNote(): Note {
         val upNote = INoteRepository.
     }
+
+ */
 }
