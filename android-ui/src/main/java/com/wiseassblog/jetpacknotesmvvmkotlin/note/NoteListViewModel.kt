@@ -8,12 +8,14 @@ import com.wiseassblog.jetpacknotesmvvmkotlin.common.GET_NOTES_ERROR
 import com.example.domain.user.Result
 import com.example.domain.note.model.Note
 import com.example.domain.note.INoteRepository
+import com.example.domain.usecases.OnGetNotesUseCase
 import com.wiseassblog.jetpacknotesmvvmkotlin.note.notelist.NoteListEvent
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 class NoteListViewModel @Inject constructor(
-    private val noteRepo: INoteRepository,
+    //private val noteRepo: INoteRepository,
+    private val onGetNotesUseCase: OnGetNotesUseCase,
     uiContext: AppCoroutineDispatchers
 ) : BaseViewModel<NoteListEvent>(uiContext.main) {
 
@@ -36,7 +38,7 @@ class NoteListViewModel @Inject constructor(
     }
 
     private fun getNotes() = launch {
-        val notesResult = noteRepo.getNotes()
+        val notesResult = onGetNotesUseCase.getNotes()
 
         when (notesResult) {
             is Result.Value -> noteListState.value = notesResult.value

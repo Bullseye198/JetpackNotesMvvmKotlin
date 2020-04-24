@@ -12,6 +12,8 @@ import com.example.data.note.NoteRepoImpl_Factory;
 import com.example.domain.AppCoroutineDispatchers;
 import com.example.domain.usecases.OnDeleteNoteUseCase;
 import com.example.domain.usecases.OnDeleteNoteUseCase_Factory;
+import com.example.domain.usecases.OnGetNotesUseCase;
+import com.example.domain.usecases.OnGetNotesUseCase_Factory;
 import com.example.domain.usecases.OnUpdateNoteUseCase;
 import com.example.domain.usecases.OnUpdateNoteUseCase_Factory;
 import com.google.common.collect.ImmutableMap;
@@ -82,6 +84,8 @@ public final class DaggerAppComponent implements AppComponent {
 
   private Provider<OnUpdateNoteUseCase> onUpdateNoteUseCaseProvider;
 
+  private Provider<OnGetNotesUseCase> onGetNotesUseCaseProvider;
+
   private Provider<AppCoroutineDispatchers> provideCoroutineDispatchersProvider;
 
   private Provider<NoteViewModel> noteViewModelProvider;
@@ -141,8 +145,9 @@ public final class DaggerAppComponent implements AppComponent {
     this.noteRepoImplProvider = DoubleCheck.provider(NoteRepoImpl_Factory.create(provideNoteDaoProvider));
     this.onDeleteNoteUseCaseProvider = OnDeleteNoteUseCase_Factory.create((Provider) noteRepoImplProvider);
     this.onUpdateNoteUseCaseProvider = OnUpdateNoteUseCase_Factory.create((Provider) noteRepoImplProvider);
+    this.onGetNotesUseCaseProvider = OnGetNotesUseCase_Factory.create((Provider) noteRepoImplProvider);
     this.provideCoroutineDispatchersProvider = DoubleCheck.provider(ApplicationModule_ProvideCoroutineDispatchersFactory.create());
-    this.noteViewModelProvider = NoteViewModel_Factory.create(onDeleteNoteUseCaseProvider, onUpdateNoteUseCaseProvider, provideCoroutineDispatchersProvider);
+    this.noteViewModelProvider = NoteViewModel_Factory.create(onDeleteNoteUseCaseProvider, onUpdateNoteUseCaseProvider, onGetNotesUseCaseProvider, provideCoroutineDispatchersProvider);
     this.noteListViewModelProvider = NoteListViewModel_Factory.create((Provider) noteRepoImplProvider, provideCoroutineDispatchersProvider);
     this.firebaseUserRepoImplProvider = DoubleCheck.provider(FirebaseUserRepoImpl_Factory.create());
     this.userViewModelProvider = UserViewModel_Factory.create((Provider) firebaseUserRepoImplProvider, provideCoroutineDispatchersProvider);
