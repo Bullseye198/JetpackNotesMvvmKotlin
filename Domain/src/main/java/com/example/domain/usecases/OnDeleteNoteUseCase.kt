@@ -7,10 +7,11 @@ import javax.inject.Inject
 
 class OnDeleteNoteUseCase @Inject constructor(
     private val iNoteRepository: INoteRepository
-) {/*
+) {
 
-    fun deleteNote(): Note {
-        val delNote = INoteRepository.
+    suspend fun deleteNote(note: Note) {
+        val delNote = iNoteRepository.deleteNote(note)
+
     }
-*/
+
 }
