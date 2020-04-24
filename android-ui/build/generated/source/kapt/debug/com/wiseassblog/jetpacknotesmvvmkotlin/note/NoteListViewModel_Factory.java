@@ -2,7 +2,7 @@
 package com.wiseassblog.jetpacknotesmvvmkotlin.note;
 
 import com.example.domain.AppCoroutineDispatchers;
-import com.example.domain.note.INoteRepository;
+import com.example.domain.usecases.OnGetNotesUseCase;
 import dagger.internal.Factory;
 import javax.inject.Provider;
 
@@ -11,28 +11,29 @@ import javax.inject.Provider;
     "rawtypes"
 })
 public final class NoteListViewModel_Factory implements Factory<NoteListViewModel> {
-  private final Provider<INoteRepository> noteRepoProvider;
+  private final Provider<OnGetNotesUseCase> onGetNotesUseCaseProvider;
 
   private final Provider<AppCoroutineDispatchers> uiContextProvider;
 
-  public NoteListViewModel_Factory(Provider<INoteRepository> noteRepoProvider,
+  public NoteListViewModel_Factory(Provider<OnGetNotesUseCase> onGetNotesUseCaseProvider,
       Provider<AppCoroutineDispatchers> uiContextProvider) {
-    this.noteRepoProvider = noteRepoProvider;
+    this.onGetNotesUseCaseProvider = onGetNotesUseCaseProvider;
     this.uiContextProvider = uiContextProvider;
   }
 
   @Override
   public NoteListViewModel get() {
-    return newInstance(noteRepoProvider.get(), uiContextProvider.get());
+    return newInstance(onGetNotesUseCaseProvider.get(), uiContextProvider.get());
   }
 
-  public static NoteListViewModel_Factory create(Provider<INoteRepository> noteRepoProvider,
+  public static NoteListViewModel_Factory create(
+      Provider<OnGetNotesUseCase> onGetNotesUseCaseProvider,
       Provider<AppCoroutineDispatchers> uiContextProvider) {
-    return new NoteListViewModel_Factory(noteRepoProvider, uiContextProvider);
+    return new NoteListViewModel_Factory(onGetNotesUseCaseProvider, uiContextProvider);
   }
 
-  public static NoteListViewModel newInstance(INoteRepository noteRepo,
+  public static NoteListViewModel newInstance(OnGetNotesUseCase onGetNotesUseCase,
       AppCoroutineDispatchers uiContext) {
-    return new NoteListViewModel(noteRepo, uiContext);
+    return new NoteListViewModel(onGetNotesUseCase, uiContext);
   }
 }

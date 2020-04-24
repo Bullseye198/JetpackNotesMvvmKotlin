@@ -12,6 +12,8 @@ import com.example.data.note.NoteRepoImpl_Factory;
 import com.example.domain.AppCoroutineDispatchers;
 import com.example.domain.usecases.OnDeleteNoteUseCase;
 import com.example.domain.usecases.OnDeleteNoteUseCase_Factory;
+import com.example.domain.usecases.OnGetNoteByIdUseCase;
+import com.example.domain.usecases.OnGetNoteByIdUseCase_Factory;
 import com.example.domain.usecases.OnGetNotesUseCase;
 import com.example.domain.usecases.OnGetNotesUseCase_Factory;
 import com.example.domain.usecases.OnUpdateNoteUseCase;
@@ -86,6 +88,8 @@ public final class DaggerAppComponent implements AppComponent {
 
   private Provider<OnGetNotesUseCase> onGetNotesUseCaseProvider;
 
+  private Provider<OnGetNoteByIdUseCase> onGetNoteByIdUseCaseProvider;
+
   private Provider<AppCoroutineDispatchers> provideCoroutineDispatchersProvider;
 
   private Provider<NoteViewModel> noteViewModelProvider;
@@ -146,9 +150,10 @@ public final class DaggerAppComponent implements AppComponent {
     this.onDeleteNoteUseCaseProvider = OnDeleteNoteUseCase_Factory.create((Provider) noteRepoImplProvider);
     this.onUpdateNoteUseCaseProvider = OnUpdateNoteUseCase_Factory.create((Provider) noteRepoImplProvider);
     this.onGetNotesUseCaseProvider = OnGetNotesUseCase_Factory.create((Provider) noteRepoImplProvider);
+    this.onGetNoteByIdUseCaseProvider = OnGetNoteByIdUseCase_Factory.create((Provider) noteRepoImplProvider);
     this.provideCoroutineDispatchersProvider = DoubleCheck.provider(ApplicationModule_ProvideCoroutineDispatchersFactory.create());
-    this.noteViewModelProvider = NoteViewModel_Factory.create(onDeleteNoteUseCaseProvider, onUpdateNoteUseCaseProvider, onGetNotesUseCaseProvider, provideCoroutineDispatchersProvider);
-    this.noteListViewModelProvider = NoteListViewModel_Factory.create((Provider) noteRepoImplProvider, provideCoroutineDispatchersProvider);
+    this.noteViewModelProvider = NoteViewModel_Factory.create(onDeleteNoteUseCaseProvider, onUpdateNoteUseCaseProvider, onGetNotesUseCaseProvider, onGetNoteByIdUseCaseProvider, provideCoroutineDispatchersProvider);
+    this.noteListViewModelProvider = NoteListViewModel_Factory.create(onGetNotesUseCaseProvider, provideCoroutineDispatchersProvider);
     this.firebaseUserRepoImplProvider = DoubleCheck.provider(FirebaseUserRepoImpl_Factory.create());
     this.userViewModelProvider = UserViewModel_Factory.create((Provider) firebaseUserRepoImplProvider, provideCoroutineDispatchersProvider);
     this.mapOfClassOfAndProviderOfViewModelProvider = MapProviderFactory.<Class<? extends ViewModel>, ViewModel>builder(4).put(MainActivityViewModel.class, (Provider) MainActivityViewModel_Factory.create()).put(NoteViewModel.class, (Provider) noteViewModelProvider).put(NoteListViewModel.class, (Provider) noteListViewModelProvider).put(UserViewModel.class, (Provider) userViewModelProvider).build();

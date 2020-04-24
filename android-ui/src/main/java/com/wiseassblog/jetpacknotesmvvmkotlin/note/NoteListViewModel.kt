@@ -14,7 +14,6 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 class NoteListViewModel @Inject constructor(
-    //private val noteRepo: INoteRepository,
     private val onGetNotesUseCase: OnGetNotesUseCase,
     uiContext: AppCoroutineDispatchers
 ) : BaseViewModel<NoteListEvent>(uiContext.main) {

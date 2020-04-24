@@ -9,6 +9,7 @@ import com.example.domain.user.Result
 import com.example.domain.note.model.Note
 import com.example.domain.note.INoteRepository
 import com.example.domain.usecases.OnDeleteNoteUseCase
+import com.example.domain.usecases.OnGetNoteByIdUseCase
 import com.example.domain.usecases.OnGetNotesUseCase
 import com.example.domain.usecases.OnUpdateNoteUseCase
 import com.example.domain.user.model.User
@@ -23,6 +24,7 @@ class NoteViewModel @Inject constructor(
     private val onDeleteNoteUseCase: OnDeleteNoteUseCase,
     private val onUpdateNoteUseCase: OnUpdateNoteUseCase,
     private val onGetNotesUseCase: OnGetNotesUseCase,
+    private val onGetNoteByIdUseCase: OnGetNoteByIdUseCase,
     coroutineDispatchers: AppCoroutineDispatchers
 ) : BaseViewModel<NoteDetailEvent>(coroutineDispatchers.main) {
 
@@ -68,12 +70,11 @@ class NoteViewModel @Inject constructor(
     private fun getNote(noteId: String) = launch {
         if (noteId == "") newNote()
         else {
-            val noteResult = onGetNotesUseCase.getNotes()
+            val noteResult = onGetNoteByIdUseCase.getNote(noteId)
 
             when (noteResult) {
-                is Result.Value -> noteState.value = Note("","",
-                1,"",creator = User("","")
-                )
+                is Result.Value -> noteState.value = noteResult.value
+
                 is Result.Error -> errorState.value = GET_NOTE_ERROR
             }
         }
