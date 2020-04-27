@@ -55,6 +55,13 @@ class NoteRepoImpl @Inject constructor(
         else getLocalNotes()
     }
 
+    suspend fun deleteAllNotes(): Result<Exception, Unit> {
+        val user = getActiveUser()
+        return deleteAllLocalNotes()
+    }
+
+
+
 
     /**
      * if currentUser != null, return true
@@ -118,6 +125,7 @@ class NoteRepoImpl @Inject constructor(
         )
     }
 
+
     /**
      * Notes are stored with the following composite document name:
      * note.creationDate + note.creator.uid
@@ -157,11 +165,9 @@ class NoteRepoImpl @Inject constructor(
         local.insertOrUpdateNote(note.toRoomNote)
         Unit
     }
-    //Delete all notes function
-    private suspend fun deleteAllNotes(): Result<Exception, List<Note>> = Result.build {
-        local.deleteAllNotes().toNoteListFromRoomNote()
+
+    override suspend fun deleteAllLocalNotes(): Result<Exception, Unit> = Result.build {
+        local.deleteAllNotes()
+        Unit
     }
-
-
-
 }

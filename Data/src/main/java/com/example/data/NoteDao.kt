@@ -2,6 +2,7 @@ package com.example.data
 
 import androidx.room.*
 import com.google.common.net.HttpHeaders.FROM
+import java.lang.Exception
 
 
 @Dao
@@ -20,8 +21,8 @@ interface NoteDao {
     suspend fun insertOrUpdateNote(note: RoomNote): Long
 
     //add function for deleting all notes
-    @Query("SELECT * FROM notes")
-    suspend fun deleteAllNotese(): List<RoomNote>
+    @Query("DELETE FROM notes")
+    suspend fun deleteAllNotes(): List<RoomNote>
 
 
 }

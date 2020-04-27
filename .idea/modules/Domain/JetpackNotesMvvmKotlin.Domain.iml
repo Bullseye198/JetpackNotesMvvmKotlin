@@ -58,6 +58,7 @@
     <exclude-output />
     <content url="file://$MODULE_DIR$/../../../Domain">
       <sourceFolder url="file://$MODULE_DIR$/../../../Domain/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../Domain/build/generated/source/kapt/main" isTestSource="false" generated="true" />
       <excludeFolder url="file://$MODULE_DIR$/../../../Domain/.gradle" />
       <excludeFolder url="file://$MODULE_DIR$/../../../Domain/build" />
     </content>
@@ -227,6 +228,5 @@
       </library>
     </orderEntry>
     <orderEntry type="library" scope="TEST" name="Gradle: org.objenesis:objenesis:2.5" level="project" />
-    <orderEntry type="library" exported="" name="Gradle: JetpackNotesMvvmKotlin.Domain.Domain" level="project" />
   </component>
 </module>
