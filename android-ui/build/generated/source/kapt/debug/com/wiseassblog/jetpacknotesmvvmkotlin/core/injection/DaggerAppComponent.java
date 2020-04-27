@@ -86,13 +86,13 @@ public final class DaggerAppComponent implements AppComponent {
 
   private Provider<OnUpdateNoteUseCase> onUpdateNoteUseCaseProvider;
 
-  private Provider<OnGetNotesUseCase> onGetNotesUseCaseProvider;
-
   private Provider<OnGetNoteByIdUseCase> onGetNoteByIdUseCaseProvider;
 
   private Provider<AppCoroutineDispatchers> provideCoroutineDispatchersProvider;
 
   private Provider<NoteViewModel> noteViewModelProvider;
+
+  private Provider<OnGetNotesUseCase> onGetNotesUseCaseProvider;
 
   private Provider<NoteListViewModel> noteListViewModelProvider;
 
@@ -149,10 +149,10 @@ public final class DaggerAppComponent implements AppComponent {
     this.noteRepoImplProvider = DoubleCheck.provider(NoteRepoImpl_Factory.create(provideNoteDaoProvider));
     this.onDeleteNoteUseCaseProvider = OnDeleteNoteUseCase_Factory.create((Provider) noteRepoImplProvider);
     this.onUpdateNoteUseCaseProvider = OnUpdateNoteUseCase_Factory.create((Provider) noteRepoImplProvider);
-    this.onGetNotesUseCaseProvider = OnGetNotesUseCase_Factory.create((Provider) noteRepoImplProvider);
     this.onGetNoteByIdUseCaseProvider = OnGetNoteByIdUseCase_Factory.create((Provider) noteRepoImplProvider);
     this.provideCoroutineDispatchersProvider = DoubleCheck.provider(ApplicationModule_ProvideCoroutineDispatchersFactory.create());
-    this.noteViewModelProvider = NoteViewModel_Factory.create(onDeleteNoteUseCaseProvider, onUpdateNoteUseCaseProvider, onGetNotesUseCaseProvider, onGetNoteByIdUseCaseProvider, provideCoroutineDispatchersProvider);
+    this.noteViewModelProvider = NoteViewModel_Factory.create(onDeleteNoteUseCaseProvider, onUpdateNoteUseCaseProvider, onGetNoteByIdUseCaseProvider, provideCoroutineDispatchersProvider);
+    this.onGetNotesUseCaseProvider = OnGetNotesUseCase_Factory.create((Provider) noteRepoImplProvider);
     this.noteListViewModelProvider = NoteListViewModel_Factory.create(onGetNotesUseCaseProvider, provideCoroutineDispatchersProvider);
     this.firebaseUserRepoImplProvider = DoubleCheck.provider(FirebaseUserRepoImpl_Factory.create());
     this.userViewModelProvider = UserViewModel_Factory.create((Provider) firebaseUserRepoImplProvider, provideCoroutineDispatchersProvider);

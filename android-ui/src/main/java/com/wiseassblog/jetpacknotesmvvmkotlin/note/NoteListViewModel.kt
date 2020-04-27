@@ -9,12 +9,14 @@ import com.example.domain.user.Result
 import com.example.domain.note.model.Note
 import com.example.domain.note.INoteRepository
 import com.example.domain.usecases.OnGetNotesUseCase
+import com.example.domain.usecases.onDeleteAllNotesUseCase
 import com.wiseassblog.jetpacknotesmvvmkotlin.note.notelist.NoteListEvent
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 class NoteListViewModel @Inject constructor(
     private val onGetNotesUseCase: OnGetNotesUseCase,
+    private val onDeleteAllNotesUseCase: onDeleteAllNotesUseCase,
     uiContext: AppCoroutineDispatchers
 ) : BaseViewModel<NoteListEvent>(uiContext.main) {
 
@@ -44,4 +46,8 @@ class NoteListViewModel @Inject constructor(
             is Result.Error -> errorState.value = GET_NOTES_ERROR
         }
     }
+
+    private fun deleteNotes()
+
+
 }

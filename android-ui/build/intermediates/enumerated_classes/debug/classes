@@ -625,6 +625,7 @@ com.wiseassblog.jetpacknotesmvvmkotlin.note.notelist.NoteListFragment$observeVie
 com.wiseassblog.jetpacknotesmvvmkotlin.note.notelist.NoteListFragment$observeViewModel$3
 com.wiseassblog.jetpacknotesmvvmkotlin.note.notelist.NoteListFragment$onStart$1
 com.wiseassblog.jetpacknotesmvvmkotlin.note.notelist.NoteListFragment$onStart$2
+com.wiseassblog.jetpacknotesmvvmkotlin.note.notelist.NoteListFragment$onStart$3
 com.wiseassblog.jetpacknotesmvvmkotlin.note.notelist.NoteListFragment$setUpAdapter$1
 com.wiseassblog.jetpacknotesmvvmkotlin.note.notelist.NoteListFragmentDirections
 com.wiseassblog.jetpacknotesmvvmkotlin.note.notelist.NoteListFragmentDirections$ActionNoteListViewToNoteDetailView

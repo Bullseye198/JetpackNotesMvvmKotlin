@@ -55,6 +55,7 @@ class NoteRepoImpl @Inject constructor(
         else getLocalNotes()
     }
 
+
     /**
      * if currentUser != null, return true
      */
@@ -155,6 +156,10 @@ class NoteRepoImpl @Inject constructor(
     private suspend fun updateLocalNote(note: Note): Result<Exception, Unit> = Result.build {
         local.insertOrUpdateNote(note.toRoomNote)
         Unit
+    }
+    //Delete all notes function
+    private suspend fun deleteAllNotes(): Result<Exception, List<Note>> = Result.build {
+        local.deleteAllNotes().toNoteListFromRoomNote()
     }
 
 

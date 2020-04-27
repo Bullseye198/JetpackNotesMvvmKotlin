@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
+import com.example.data.note.NoteRepoImpl
 import com.wiseassblog.jetpacknotesmvvmkotlin.R
 import com.wiseassblog.jetpacknotesmvvmkotlin.common.makeToast
 import com.wiseassblog.jetpacknotesmvvmkotlin.common.startWithFade
@@ -51,6 +52,12 @@ class NoteListFragment : DaggerFragment() {
         fab_create_new_item.setOnClickListener {
             val direction = NoteListFragmentDirections.actionNoteListViewToNoteDetailView("")
             findNavController().navigate(direction)
+        }
+
+        fab_delete_all_notes.setOnClickListener {
+            viewModel.handleEvent(
+
+            )
         }
 
         imv_toolbar_auth.setOnClickListener {

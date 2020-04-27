@@ -23,7 +23,6 @@ import javax.inject.Inject
 class NoteViewModel @Inject constructor(
     private val onDeleteNoteUseCase: OnDeleteNoteUseCase,
     private val onUpdateNoteUseCase: OnUpdateNoteUseCase,
-    private val onGetNotesUseCase: OnGetNotesUseCase,
     private val onGetNoteByIdUseCase: OnGetNoteByIdUseCase,
     coroutineDispatchers: AppCoroutineDispatchers
 ) : BaseViewModel<NoteDetailEvent>(coroutineDispatchers.main) {
