@@ -55,9 +55,9 @@ class NoteRepoImpl @Inject constructor(
         else getLocalNotes()
     }
 
-    override suspend fun deleteAllNotes(): Result<Exception, Unit> {
-
-        return deleteAllLocalNotes()
+    override suspend fun deleteAllNotes(): Result<Exception, Unit> = Result.build {
+        local.deleteAllNotes()
+        Unit
     }
 
 
@@ -166,8 +166,4 @@ class NoteRepoImpl @Inject constructor(
         Unit
     }
 
-    private suspend fun deleteAllLocalNotes(): Result<Exception, Unit> = Result.build {
-        local.deleteAllNotes()
-        Unit
-    }
 }
