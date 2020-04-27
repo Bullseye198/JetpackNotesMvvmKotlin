@@ -9,7 +9,7 @@ class OnDeleteAllNotesUseCase @Inject constructor(
     private val iNoteRepository: INoteRepository
 ) {
     suspend fun deleteAllNotes(): Result<Exception, Unit> {
-        return iNoteRepository.deleteAllLocalNotes()
+        return iNoteRepository.deleteAllNotes()
     }
 
 }

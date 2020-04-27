@@ -22,7 +22,7 @@ interface NoteDao {
 
     //add function for deleting all notes
     @Query("DELETE FROM notes")
-    suspend fun deleteAllNotes(): List<RoomNote>
+    suspend fun deleteAllNotes()
 
 
 }

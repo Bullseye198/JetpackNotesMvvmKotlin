@@ -50,5 +50,6 @@ class NoteListViewModel @Inject constructor(
 
     private fun deleteAllNotes() = launch {
        onDeleteAllNotesUseCase.deleteAllNotes()
+        getNotes()
     }
 }
