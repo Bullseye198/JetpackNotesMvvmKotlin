@@ -31,6 +31,7 @@ class NoteListViewModel @Inject constructor(
         when (event) {
             is NoteListEvent.OnStart -> getNotes()
             is NoteListEvent.OnNoteItemClick -> editNote(event.position)
+            is NoteListEvent.OnDelete -> deleteAllNotes()
         }
     }
 
@@ -47,7 +48,9 @@ class NoteListViewModel @Inject constructor(
         }
     }
 
-    private fun deleteNotes()
+    private fun deleteAllNotes() {
+
+    }
 
 
 }

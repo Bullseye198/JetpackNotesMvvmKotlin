@@ -56,7 +56,7 @@ class NoteListFragment : DaggerFragment() {
 
         fab_delete_all_notes.setOnClickListener {
             viewModel.handleEvent(
-
+                NoteListEvent.OnDelete
             )
         }
 
